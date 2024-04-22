@@ -23,12 +23,12 @@ def productDetailView(request, product_id):
     })
 
 
-def productsListView(request, category_slug):
+def productsListByCategoryView(request, category_slug):
     category_obj = Category.objects.get(slug=category_slug)
 
     products = Product.objects.filter(category=category_obj)
 
-    return render(request, 'inventory/products_list.html', {
+    return render(request, 'inventory/products_by_category.html', {
         'products': products,
         'category': category_obj
     })
