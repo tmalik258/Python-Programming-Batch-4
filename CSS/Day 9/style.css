@@ -1,0 +1,36 @@
+.box {
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+}
+
+#box1 {
+    background-color: red;
+}
+
+#box2 {
+    /* margin-top: 100px; */
+    background-color: aqua;
+}
+
+/* Social Links */
+.social {
+    display: block;
+    height: 30px;
+    margin: 10px;
+}
+
+#social-link1 {
+    background-color: aquamarine;
+}
+#social-link2 {
+    background-color: yellow;
+}
+#social-link3 {
+    background-color: blue;
+    color: white;
+}
+#social-link4 {
+    background-color: green;
+    color: red;
+}

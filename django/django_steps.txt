@@ -1,0 +1,88 @@
+Django 
+Steps
+
+1. Virtual Environment
+py -m venv venv
+
+2.Activate the enviroment
+venv\Scripts\activate
+  
+if in case face running scripts is disabled error
+Set-ExecutionPolicy Unrestricted -Scope Process
+
+3. Install Django
+py -m pip install Django
+
+4. Check Django Version
+django-admin --version
+
+5.Django Create Project
+django-admin startproject project
+
+Django creates a project folder on my computer, with this content:
+
+project
+    manage.py
+    project/
+        __init__.py
+        asgi.py
+        settings.py
+        urls.py
+        wsgi.py
+
+6. Run the Django Project 
+Navigate to the /project folder and execute this command in the command prompt
+
+py manage.py runserver
+
+7.Django Create App
+py manage.py startapp members
+
+Django creates a folder named members in my project, with this content:
+project
+    manage.py
+    project/
+    members/
+        migrations/
+            __init__.py
+        __init__.py
+        admin.py
+        apps.py
+        models.py
+        tests.py
+        views.py
+
+8. Django Views
+There is a views.py in your members folder that looks like this:
+project/members/views.py
+Find it and open it, and replace the content with this:
+
+from django.shortcuts import render
+from django.http import HttpResponse
+
+def members(request):
+    return HttpResponse("Hello world!")
+
+9. Django URLs
+Create a file named urls.py in the same folder as the views.py file, and type this code in it:
+
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('members/', views.members, name='members'),
+]
+
+10. There is a file called urls.py on the my_tennis_club folder, open that file and add the include module in the import statement, 
+and also add a path()function in the urlpatterns[] list, with arguments that will route users that comes in via 127.0.0.1:8000/.
+project/project/urls.py
+
+from django.contrib import admin
+from django.urls import include, path
+
+urlpatterns = [
+    path('', include('members.urls')),
+    path('admin/', admin.site.urls),
+]
+
+py manage.py runserver

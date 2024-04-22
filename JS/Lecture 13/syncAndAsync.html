@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Code and Sync Code</title>
+</head>
+<body>
+    <h1>Synchronous Code and Asynchronous Function</h1>
+
+
+    <script>
+        console.log("hello")
+        console.log("world")
+        console.log("welcome")
+
+        // inbuilt async function
+        setTimeout(() => {
+            console.log("hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii")
+        }, 5000)
+
+        console.log("to")
+        console.log("Python Programming");
+
+
+
+        // async functin syntax
+        const hello = async () => {
+            console.log("wassup");
+        }
+
+        hello();
+    </script>
+</body>
+</html>

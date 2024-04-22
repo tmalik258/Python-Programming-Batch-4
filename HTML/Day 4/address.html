@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address Form</title>
+</head>
+<body>
+    <h2>Address Form</h2>
+
+    <form>
+        <label for="address">Address:</label>
+        <input type="text" id="address" placeholder="Input your Address">
+
+        <br><br>
+        <label for="additionaladrs">Additional Address (Optional)</label>
+        <textarea name="additionaladrs" id="additionaladrs" cols="30" rows="10" placeholder="Additional Address (Optional)"></textarea>
+
+        <br><br>
+        <label for="city">City:</label>
+        <select name="city" id="city">
+            <option value="" disabled selected>Choose City</option>
+            <!-- Punjab -->
+            <optgroup label="Punjab">
+                <option value="lhr">Lahore</option>
+                <option value="mlt">Multan</option>
+                <option value="isl">Islamabad</option>
+            </optgroup>
+            <!-- Sindh -->
+            <optgroup label="Sindh">
+                <option>Karachi</option>
+                <option>Hyderabad</option>
+            </optgroup>
+            <!-- KPK -->
+            <optgroup label="KPK">
+                <option>Peshawar</option>
+                <option>Swat</option>
+                <option>Kalam</option>
+            </optgroup>
+            <!-- Balochistan -->
+            <optgroup label="Balochistan">
+                <option>Quetta</option>
+            </optgroup>
+        </select>
+
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

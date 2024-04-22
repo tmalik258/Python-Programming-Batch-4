@@ -1,0 +1,11 @@
+Set the text color to red for all <p> element
+
+Set the text color to blue, for the element with id="para1"
+
+Set the text color to blue, for the element with class="class1"
+
+add a external style sheet with the url :"mystyle.css"
+
+Set the page background color to light Green
+
+

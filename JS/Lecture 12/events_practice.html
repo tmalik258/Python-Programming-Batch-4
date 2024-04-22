@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+        div {
+            padding: 50px;
+            background-color: blanchedalmond;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1> Stop Propagation() Method </h1>
+    <p>Click Div 1 </p>
+    <div onclick="fun2()">Parent
+        <div onclick="func1(event)">Child</div>
+    </div>
+    Stop Propagation 
+    <input type="checkbox" id="check">
+     <p> Because child is inside the Parent both get clicked 
+        when you click on Child
+     </p>
+    <script>
+       function func1(event){
+        alert("Child");
+        if(document.getElementById("check").checked){
+            event.stopPropagation();
+        }
+       }
+       function fun2(){
+        alert("Parent")
+       }
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+.grid-container {
+    height: 500px;
+    background-color: black;
+    color: white;
+
+    display: grid;
+
+    gap: 5px;
+
+    /* grid-template-areas: 
+        'header header header',
+        'navbar' 'contents' 'aside',
+        'footer' 'footer' 'footer'
+    ; */
+}
+
+
+
+#grid-header {
+    background-color: antiquewhite;
+    color: black;
+
+    grid-area: 'header';
+}
+
+#grid-nav {
+    background-color: aqua;
+    color: black;
+
+    grid-area: 'navbar';
+}
+
+#grid-contents {
+    background-color: blueviolet;
+
+    grid-area: 'contents';
+}
+
+#grid-aside {
+    background-color: brown;
+
+    grid-area: 'aside';
+}
+
+#grid-footer {
+    background-color: cadetblue;
+    color: black;
+
+    grid-area: 'footer';
+}

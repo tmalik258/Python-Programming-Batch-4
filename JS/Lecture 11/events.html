@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <h1> JavaScript Html Events</h1>
+    <h2>Onclick </h2>
+    <!-- <button onclick="document.getElementById('demo').innerHTML=Date()">This time is </button> -->
+    <button id = "click">
+        Click
+    </button>
+    <button id="click-function">
+        Click Function
+    </button>
+    <hr>
+    <form>
+        <input type = "button" onclick="sayhello()" value="Say Hello"/>
+    </form>
+    <hr>
+    <button onclick="this.innerHTML=Date()">This time is</button>
+    <hr>
+    <p> Bring your mouse</p>
+    <div onmouseover="over()" >
+    <h2>inside the division</h2>
+    </div>
+
+    <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="smile.gif" alt="Simley" width="32" height="32"> 
+    <hr>
+    Enter your name : <input type="text" onfocus="fun(this)">
+    <hr>
+    Enter your last name : <input type="text" id="lname" onblur="myfunction()">
+    <hr>
+    <div id ="div1" oncontextmen="myfun()" style="border: 1px solid black;padding: 10px;">
+    <p>
+      Right click in the box to see hidden content
+    </p>
+</div>
+<div id="div2" style="visibility: hidden;">
+<p>This info is hidden </p>
+<p>This info is hidden </p>
+<p>This info is hidden </p>
+<p>This info is hidden </p>
+</div>
+
+<form onsubmit="submit_function()">
+Enter your name : <input type="text" name="fname">
+<input type="submit" value="Submit">
+</form>
+
+<button id="mybtn">Click on</button>
+<p id="ptag"> this examples use the add eventlistner method to attach the click event to a button  </p>
+<hr>
+<button id="btn">Try it</button>
+<hr>
+
+<p id="dbl_click" ondblclick="double()">Double click this paragrapg trigger a function</p>
+    
+    <script src="events.js"></script>
+</body>
+</html>

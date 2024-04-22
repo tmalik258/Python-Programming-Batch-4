@@ -1,0 +1,17 @@
+p {
+    text-align: left;
+    background-color: lightblue;
+    text-decoration: underline;
+    text-decoration-color: red;
+    text-shadow: 2px ;
+    word-spacing: 2px;
+    text-transform: lowercase;
+    text-indent: 10px;
+    letter-spacing: 4px;
+    line-height: 30px;
+    color: coral;
+}
+h1 {
+    color:brown;
+}
+

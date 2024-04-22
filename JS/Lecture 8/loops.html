@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+</head>
+<body>
+    <ul>
+        <li>Sum all the array elements by using a loop.</li>
+        <li>Reverse the array by using a loop.</li>
+        <li>Find product of all the array elements by using a loop.</li>
+    </ul>
+    <script>
+    //     console.log("Loop Started");
+
+    //    for (let count=0; count<=1000;  count++) {
+    //     console.log("Hello World")
+    //    }
+
+    //    console.log("Loop ended")
+       
+
+    let cars = ["mercedes", "bmw", "suzuki", "honda"]
+
+    //    console.log(cars[0])
+    //    console.log(cars[1])
+    //    console.log(cars[2])
+    //    console.log(cars[3])
+
+    // for (let i=0; i < 4; i++) {
+    //     console.log(cars[i])
+    // }
+
+
+    // For In Loop
+    for (let i in cars) {
+        console.log(cars[i])
+    }
+
+    // Task 1
+    let arrOfNum = [54, 12, 65, 32, 21];
+
+    let sum = 0;
+    console.log(sum)
+
+    let n = arrOfNum.length;
+
+    for (let i=0; i<n; i++) {
+        sum = sum + arrOfNum[i]
+    }
+
+    console.log(sum)
+
+    // Reverse Iteration Loop
+    // for (let i=10; i>-10; i--) {
+    //     console.log("i = ", i)
+    // }
+
+
+    // Task 2
+    let reverse = ['Ayan','Ali','Ahmad','Abdullah', 'Amna', 'Arshad']
+
+    // i = 6
+    for (let i=reverse.length-1; i>=0; i--) {
+        console.log(reverse[i])
+    }
+
+
+    // Task 3
+    let product = 1;
+
+    console.log("Product is ", product);
+
+    for (let i in arrOfNum) {
+        product *= arrOfNum[i];
+        console.log("Product is ", product);
+    }
+
+    let student = {
+        firstName: "Abdul",
+        lastName: "Manan",
+        age: 24,
+        bloodGroup: "A+",
+        marks: 99.99
+    }
+
+
+    // strings, array, objects
+    for (let key in student) {
+        console.log(key + " = " + student[key])
+    }
+
+    // let text = "Hello World"  // string or array of characters
+    
+    // for (let t in text) {
+    //     console.log(text[t])
+    // }
+
+    // For Of Loop
+    // We get direct values/elements
+    for (let i of reverse) {
+        console.log(i)
+    }
+
+    // while loop
+    let m = 0;
+    while(m < 10) {
+        console.log("m = ", m);
+        m = m + 2;
+    }
+
+    // do while loop
+    let p = 0;
+
+    do {
+        console.log("p = ", p)
+
+        p++;
+    } while (p > 5);
+
+
+    let cArray = [54, 87, 96]
+
+    cArray.forEach( function (value, index) {
+        console.log(index, value)
+    })
+
+    </script>
+</body>
+</html>

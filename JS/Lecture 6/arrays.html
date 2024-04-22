@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <h1>Arrays
+    </h1>
+    <ul>
+        <li>Find the last element of an array without giving a hard-coded index.</li>
+        <li>Check whether the first or the last index of an array has a specified 
+            value, let's say 5.</li>
+            <li>Make an array to store the names of students and check whether that
+                array has your own name or not and also return the index of that value</li>
+                <li>Add the array element at the specified index.</li>
+    </ul>
+
+    <script>
+      // Creating a array
+      let students = ['ALI','Umer','Talha']
+
+      // Creating a array uses the new keyword
+      let student = new Array (1,2)
+
+      let sharks = new Array("fish","white","animal")
+      console.log(sharks)
+
+      // array access
+      let d = new Array(12.0,54.9,78.6,45.6)
+      console.log(d)
+
+      console.log(d[2])
+      console.log(d[4])
+
+      let sea = ["octopus","fish","shark","wale","dolphin"]
+      console.log(sea)
+      console.log(sea[4])
+
+      const fruits = ["banana","APPLE","orange","kiwi"]
+      let index = fruits.includes("apple")
+      console.log(index)
+
+       // push function to add new value in an array
+    sea.push("Pakistan")
+    sea.push("India")
+    sea.push("Turkey")
+    console.log(sea)
+
+    // pop function remove value from the array
+    sea.pop()
+    console.log(sea)
+
+    // add value at start of the array
+    sea.unshift("Lahore")
+    console.log(sea)
+
+    // remove value from start of the array
+    sea.shift()
+    console.log(sea)
+
+//    //ssplice function to add/ remove multiple values form array 
+//    form specific index  in between the start and end.
+//    add value in between 
+   sea.splice(2,3,"Punjab","Sindh","KPK")
+   console.log(sea)
+   // splice method
+   const fru = ["Banana","Orange","Lemon","Apple","Mango"]
+   // at position 2 add 2 elements
+    //   fru.splice(2,0, "Lemon","Kiwi")
+    //   fru.splice(2,2, "Pears","Peach","Watermellon")
+    //   console.log(fru)
+      
+      // Slice method  slice get chunk of array without affecting orignal array
+      
+      console.log (fru)
+      const citrus =  fru.slice(1, 3)
+
+       console.log(citrus)
+
+     const mybest = fru.slice(-3, -1)
+       console.log(mybest)
+     
+    const myarray = [1,2,3,4,5,6,7,8,9,10]
+    console.log(myarray)
+    const slicedarray = myarray.slice (-5)
+    console.log (slicedarray)
+     
+     // delete a value from the given index of array
+     console.log(fru[3])
+      delete fru[3]
+      console.log(fru)
+
+    // update any index value
+    console.log(fru[3])
+    fru[3] = 'graphes'
+    console.log(fru)
+
+    // join 
+   const e = fru.join("*")
+    console.log(e)
+
+    // string concatenation
+    console.log('helow' +'World')
+
+    // sort the array
+    console.log(fru)
+    let sort = fru.reverse();
+    console.log(sort)
+   
+    // concat method 
+    const girls = ["anum","laiba"] // Array 1
+    console.log(girls)
+    const boys = ["zia","pappu","kalu"] // Array 2
+    console.log(boys)
+    const child = girls.concat(boys)
+    console.log(child)
+    </script>
+</body>
+</html>

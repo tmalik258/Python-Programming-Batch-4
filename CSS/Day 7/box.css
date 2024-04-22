@@ -1,0 +1,10 @@
+.box {
+    background-color: burlywood;
+    width: 300px;
+    border: 15px solid greenyellow;
+    border-bottom-color: aqua;
+    border-top-color: brown;
+    padding: 50px;
+    margin: 20px;
+    box-shadow: 20px 20px;
+}

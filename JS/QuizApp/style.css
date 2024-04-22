@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: wheat;
+}
+
+#main-heading {
+    margin: 20px;
+    text-align: center;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    margin: 10px auto;
+    border-radius: 10px;
+    max-width: 500px;
+}
+
+.btn {
+    text-align: left;
+    width: 100%;
+    margin: 5px;
+    padding: 5px;
+    background-color: none;
+    color: rgb(42, 42, 42);
+    border: 1px solid black;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.btn:hover:not([disabled]) {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.btn:disabled {
+    cursor: no-drop;
+}
+
+#answer_buttons {
+    margin: 20px 0;
+}
+
+#next_button {
+    display: none;
+    padding: 5px;
+    width: 150px;
+    margin: auto;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+#next_button:hover {
+    background-color: rgb(74, 74, 74);
+}
+
+.correct {
+    background-color: rgb(134, 205, 134);
+}
+
+.incorrect {
+    background-color: tomato;
+}

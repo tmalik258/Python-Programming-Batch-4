@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="fullname">Your Full Name:</label> <br>
+        <input id="fullname" type="text" value="Azadchaiwala" name="fullName" placeholder="Write your full name">
+        <br>
+        <br>
+        <label for="email123">Your Email:</label> <br>
+        <input id="email123" type="email" name="email" placeholder="Write your email">
+        <br><br>
+
+        <label for="pwd">Enter your Password:</label>
+        <input id="pwd" type="password" name="password" placeholder="Enter your pass">
+        <br><br>
+
+        <label for="msg">Write a message for us</label>
+        <textarea id="msg" name="message" rows="2" cols="30"  placeholder="Enter your Message Here...">Message</textarea>
+
+        <!-- Radio Buttons  -->
+        <h4>Payment</h4>
+        <input type="radio" id="card" name="payment" value="card">
+        <label for="card">Card</label>
+        <br>
+        
+        <input type="radio" id="cash" name="payment" value="cash">
+        <label for="cash">Cash on Delivery</label>
+        <br>
+
+        <input type="radio" id="jazzcash" name="payment" value="jazzcash">
+        <label for="jazzcash">JazzCash</label>
+
+        <br><br>
+         <!-- Select Box -->
+         <label for="car">Choose your favorite Car</label>
+         <select name="cars" id="car" >
+            <option value="" disabled selected>Choose Car</option>
+            <option>BMW</option>  
+            <option value="t">Toyota</option>
+            <option value="m">Mercedes</option>
+         </select>
+
+         <br><br>
+         <!-- Data List -->
+         <label for="phone2">Choose smartphone</label>
+         <input type="text" list="phone2">
+        <datalist name="phone" id="phone2">
+            <option >Apple</option>
+            <option >Samsung</option>
+            <option >Samskjlfjd</option>
+            <option>Vivo</option>
+        </datalist>
+
+         <br><br>
+         <!-- Select Box with Opt Group -->
+         <select name="fruitsandvegetables">
+            <optgroup label="Fruits">
+                <option value="">Apple</option>
+                <option value="">Orange</option>
+            </optgroup>
+            <optgroup label="vegetables">
+                <option value="">Potato</option>
+                <option value="">Strawberry</option>
+            </optgroup>
+         </select>
+
+        <br><br>
+        <!-- checkbox buttons -->
+        <h4>Choose fruits</h4>
+        <label for="apple">Apple</label>
+        <input type="checkbox" name="fruits" id="apple" value="apple">
+
+        <label for="orange">Orange</label>
+        <input type="checkbox" name="fruits" id="orange" value="orange">
+
+        <label for="grapes">Grapes</label>
+        <input type="checkbox" name="fruits" id="grapes" value="grapes">
+
+        <br>
+        <br>
+
+       
+
+        <br><br>
+        <input type="submit" value="Save/Post">
+
+        <input type="reset" value="Reset Button">
+    </form>
+</body>
+</html>

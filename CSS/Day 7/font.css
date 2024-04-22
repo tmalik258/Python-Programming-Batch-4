@@ -1,0 +1,22 @@
+/* p {
+    font-family: 'Courier New', Courier, monospace;
+    color: red;
+} */
+
+.f2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: blueviolet
+}
+
+.f3 {
+    font-size: 44px;
+}
+
+textarea {
+    font-style: italic;
+}
+.f4 {
+     font-size: larger;
+    font-style: italic;
+    font-weight: bold;
+}

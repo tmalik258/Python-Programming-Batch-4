@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+    <style>
+        /* * {
+            color: black;
+        } */
+
+        /* Descendant Selector - Will select all children including grandchildren */
+        .container p {
+            color: red;
+        }
+
+        /* Child Selector - Will select only own children and not grandchildren */
+        .container-child > p {
+            color: red;
+        }
+
+        /* Adjacent Sibling Selector - Will select first sibling */
+        div + p {
+            color: blue;
+        }
+
+        h3 + div {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Selectors</h1>
+    <h2>Simple Selectors</h2>
+    <p>ID, Element, Class, Universal</p>
+
+
+    <h2>Combination Selectors (Relationship Selectors)</h2>
+    <h3>Descendant Selectors</h3>
+    <div class="container">
+        <p>This is paragraph 1</p>
+        <p>This is paragraph 2</p>
+        <p>This is paragraph 3</p>
+        <span>
+            <p>This is paragraph 4</p>
+        </span>
+    </div>
+    <p>hello</p>
+
+    <h3>Child Selector</h3>
+    <div class="container-child">
+        <p>This is paragraph 1</p>
+        <p>This is paragraph 2</p>
+        <p>This is paragraph 3</p>
+        <span>
+            <p>This is paragraph 4</p>
+        </span>
+    </div>
+
+    <h3>Adjacent Sibling Selector</h3>
+    <div class="container1">
+        <p>This is para 1</p>
+        <p>This is para 2</p>
+        <p>This is para 3</p>
+    </div>
+    <p>Sibling Paragraph4</p>
+    <p>Sibling Paragraph5</p>
+    
+    <div class="container1">
+        <p>This is para 1</p>
+        <p>This is para 2</p>
+        <p>This is para 3</p>
+    </div>
+    <p>Sibling Paragraph4</p>
+    <p>Sibling Paragraph5</p>
+</body>
+</html>

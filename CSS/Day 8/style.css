@@ -1,0 +1,61 @@
+/* Position Absolute */
+.outer-div {
+    background-color: bisque;
+    height: 100px;
+    position: relative;
+}
+
+.inner-div {
+    background-color: blueviolet;
+    color: white;
+    height: 50px;
+    position: absolute;
+    right: 10px;
+}
+
+/* Position Fixed */
+
+#position-fixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100; 
+    color: brown;
+}
+
+
+/* Z-Index Styling */
+
+.container {
+    background-color: black;
+    /* color: white; */
+    height: 200px;
+    position: relative;
+}
+
+.box-1 {
+    background-color: aqua;
+    height: 100px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    z-index: 99;
+}
+
+.box-2 {
+    background-color: coral;
+    height: 100px;
+    position: absolute;
+    left: 40px;
+    top: 40px;
+    z-index: 1;
+}
+
+.box-3 {
+    background-color: yellow;
+    height: 100px;
+    position: absolute;
+    top: 60px;
+    left: 60px;
+    z-index: 100;
+}

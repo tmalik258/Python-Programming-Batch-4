@@ -1,0 +1,8 @@
+headings
+title
+anchor tags - target
+lists - dl, ol, ul
+table - thead, tbody, tfoot
+images
+iframes - link yt video
+contact form - fieldset, optoptions

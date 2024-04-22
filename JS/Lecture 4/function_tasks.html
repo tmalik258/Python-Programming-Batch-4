@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks</title>
+</head>
+<body>
+
+    <script>
+// Create a function that takes two numbers as input and returns the largest of the two.
+     function check_numbers(a,b) {
+        if (a>b){
+            console.log('First Number is Greater' + a)
+        }
+        else if(a<b){
+            console.log('Second number is Greater' + b)
+        }
+        else{
+            console.log('both numbers are equal'+ a +','+b )
+     }
+    }
+
+    //  check_numbers(12,24)
+    //  check_numbers(40,24)
+    check_numbers(40,40)
+
+    function findlarge (num1, num2){
+        if (num1>num2) {
+            return num1;
+        }
+        else{
+            return num2;
+        }
+    }
+    // result = findlarge (20,40)
+    // console.log(result)
+   // Temperature in celsius
+   
+   function cel_to_far(temp){
+    let result = (temp * (9/5)) + 32
+    return result;
+   }
+  let result =  cel_to_far(25)
+  console.log('temp'+ result)
+    
+  function cal_prod(a,b){
+    return a*b
+  }
+  let res = cal_prod(15,2)
+  console.log(res)
+    
+    
+    </script>
+
+  
+</body>
+</html>

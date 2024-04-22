@@ -1,0 +1,82 @@
+.container {
+    height: 500px;
+    background-color: black;
+    display: flex;
+    padding: 10px;
+
+    
+    /* Flex Directions - row, column */
+
+    /* flex-direction: row; */
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column; */
+    /* flex-direction: column-reverse; */
+
+
+    /* Flex Wrap */
+
+    flex-wrap: wrap;
+    /* flex-wrap: wrap-reverse; */
+    /* flex-wrap: nowrap;     --by default */
+
+
+    /* Flex Wrap and Direction - short hand property */
+
+    flex-flow: row wrap;
+
+
+    /* Flex Justify Content */
+
+    /* justify-content: center; */
+    /* justify-content: flex-start;    -- by default */
+    /* justify-content: flex-end; */
+    /* justify-content: space-around; */
+    /* justify-content: space-between; */
+    /* justify-content: space-evenly; */
+
+
+    /* Flex Align Items - dont control spaces */
+
+    /* align-items: center; */
+    /* align-items: flex-start; */
+    /* align-items: flex-end; */
+
+
+    /* Flex Align Content - control spaces too */
+
+    /* align-content: center; */
+    /* align-content: flex-start; */
+    /* align-content: flex-end; */
+    /* align-content: space-around; */
+    /* align-content: space-between; */
+    align-content: space-evenly;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+}
+
+#box1 {
+    background-color: red;
+}
+
+#box2 {
+    background-color: aqua;
+}
+
+#box3 {
+    background-color: blueviolet;
+}
+
+#box4 {
+    background-color: bisque;
+}
+
+#box5 {
+    background-color: yellow;
+}
+
+#box6 {
+    background-color: brown;
+}

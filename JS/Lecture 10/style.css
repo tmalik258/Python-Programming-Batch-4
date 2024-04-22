@@ -1,0 +1,15 @@
+.link {
+    text-decoration: none;
+    color: red;
+    font-weight: bolder;
+}
+
+.border {
+    border: 1px solid red;
+}
+
+.box {
+    margin-top: 10px;
+    height: 200px;
+    background-color: brown;
+}

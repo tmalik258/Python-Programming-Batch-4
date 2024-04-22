@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+<body>
+    <ul>
+        <li>Write a function that takes a temperature in celsius and converts it to Fahrenheit.</li>
+        <li>Write a program that takes the age and checks if they are eligible for voting (e.g 18 or older)</li>
+        <li>
+            Create a function that takes two numbers as input and returns the largest of the two
+        </li>
+    </ul>
+  
+  <script>
+    // simple function
+      function display() 
+    {
+        console.log('hellow world')
+    }
+    display()
+    
+    // 1 method
+    let display1 = function () {
+        console.log ('hellow')
+    }
+    display1()
+
+    // general function with parameters
+    function add(a,b) {
+        console.log(a+b)
+    }
+ add(10,30)
+    // mul 
+   let mul = function (a,b,c) {
+        return a*b*c
+    }  
+  let res =  mul(2,5,3)
+   console.log (res)
+
+   //Arrow Function 
+   let display2 = () => { console.log('Arrow Function')}
+   display2()
+
+   // Arrow function with multiply
+   let mul1 = (a,b,c) => {return a*b*c}
+   let res1 = mul1(2,3,3)
+   console.log (res1)
+   
+   // Negative Positive Number
+function check_num (a){
+    if (a < 0){
+        console.log('Negative Number')
+    } else if(a > 0){
+        console.log('Positive NUmber')
+    } else {
+        console.log("Number is zero")
+    }
+}
+check_num(3)
+// check number with arrow  function 
+ let check_num2 = (a) => {
+    if (a < 0){
+        console.log('Negative Number')
+    } else if(a > 0){
+        console.log('Positive NUmber')
+    } else {
+        console.log("Number is zero")
+    }
+ }
+ check_num2(0)
+  // Even odd
+    let check_even = (a) => {
+       if (a % 2 == 0){
+        console.log ('Even')
+       } else {
+        console.log ('odd')
+       }
+    }
+    check_even(25)
+    check_even(2)
+   // single line  ternary operator
+//    let check_even1 = (n) => n % 2 == 0 ? console.log('Even') : console.log ('odd')
+//    check_even1(34)
+// (n * 9.0 / 5.0) + 32.0);
+
+const convert = (n)=> {
+    return (n * 9/5)+ 32;
+}
+const temp_f = convert (32);
+console.log(temp_f)
+// ternary operator function
+const check_voting = (age) => (age > 18 ? console.log('Eligible for vote') : console.log('Not Eligible') );
+check_voting(20)
+
+let check_vote = (age) => {
+    if (age >18){
+        console.log('eligbile for vote')
+    }else {
+        console.log ('not eligible')
+    }
+}
+check_vote(10)
+
+  </script>
+</body>
+</html>
