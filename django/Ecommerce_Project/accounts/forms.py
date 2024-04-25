@@ -28,14 +28,17 @@ class SignUpForm(UserCreationForm):
         super().__init__(*args, **kwargs)
 
         self.fields['first_name'].widget.attrs.update({
-            'class': 'form-control',
+            'class': 'form-control jks',
             'placeholder': 'Enter your First Name'
         })
+        self.fields['first_name'].label = 'heyyy'
+        self.fields['first_name'].help_text = 'helo'
 
         self.fields['last_name'].widget.attrs.update({
             'class': 'form-control',
             'placeholder': 'Enter your Last Name'
         })
+
 
         self.fields['password1'].widget.attrs.update({
             'class': 'form-control',

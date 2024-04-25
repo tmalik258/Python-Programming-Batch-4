@@ -22,9 +22,21 @@ def loginView(request):
 
 def signUpView(request):
     if request.method == 'POST':
-        pass
+        form = SignUpForm(request.POST)
+
+        if form.is_valid():
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password1']
+            form.save()
+            user = authenticate(request, username=username, password=password)
+
+            if user:
+                login(request, user)
+                return redirect('index')
+        
     else:
         form = SignUpForm()
+
     return render(request, 'accounts/signup.html', {
         'form': form
     })

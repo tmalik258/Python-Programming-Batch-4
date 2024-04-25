@@ -35,3 +35,11 @@ class Product(models.Model):
     
     def __str__(self):
         return self.title
+
+
+class ProductImage(models.Model):
+    product_id = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='product_images')
+    image = models.ImageField(upload_to='product_media/')
+
+    def __str__(self):
+        return self.product_id.title
