@@ -31,3 +31,11 @@ class OrderItem(models.Model):
 
     def __str__(self) -> str:
         return f"{self.product_id.title} | {self.order_id.is_placed} | {self.quantity}"
+    
+    def total(self):
+        price = 0
+        if self.product_id.discounted_price:
+            price = self.product_id.discounted_price
+        else:
+            price = self.product_id.price
+        return price * self.quantity

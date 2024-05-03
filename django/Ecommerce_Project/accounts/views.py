@@ -1,11 +1,15 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, logout, authenticate
+from django.contrib import messages
 
 from .forms import SignUpForm
 
 # Create your views here.
 
 def loginView(request):
+    if request.user.is_authenticated:
+        return redirect('index')
+
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
@@ -13,6 +17,7 @@ def loginView(request):
         
         if user is not None:
             login(request, user)
+            messages.info(request, 'You are Logged In Successfully!')
             return redirect('index')
         else:
             return redirect('login')
@@ -21,6 +26,9 @@ def loginView(request):
 
 
 def signUpView(request):
+    if request.user.is_authenticated:
+        return redirect('index')
+
     if request.method == 'POST':
         form = SignUpForm(request.POST)
 

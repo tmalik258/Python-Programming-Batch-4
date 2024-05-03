@@ -1,0 +1,66 @@
+{% extends 'inventory/layout.html' %}
+{% load static %}
+ 
+{% block title %} Cart {% endblock %}
+ 
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/cart.css' %}">
+{% endblock %}
+ 
+{% block content %}
+ 
+        <div class="card">
+            <div class="row">
+                <div class="col-md-8 cart">
+                    <div class="title">
+                        <div class="row">
+                            <div class="col"><h4><b>Shopping Cart</b></h4></div>
+                            <div class="col align-self-center text-right text-muted">{% for item in cart_items %} {{ item.quantity }} {% endfor %} items</div>
+                        </div>
+                    </div>
+        
+                    <div class="row border-top">
+                        {% for item in cart_items %}
+                        <div class="row main align-items-center border-bottom">
+                            <div class="col-2"><img class="img-fluid" src="{{ item.product_id.product_images.first.image.url }}"></div>
+                            <div class="col">
+                                <div class="row text-muted">{{ item.product_id.category.name }}</div>
+                                <div class="row">{{ item.product_id.title }}</div>
+                            </div>
+                            <div class="col">
+                                <a href="{% url 'subtract-from-cart' item.product_id.product_id %}">-</a><a href="{% url 'add-to-cart' item.product_id.product_id %}" class="border">{{ item.quantity }}</a><a href="{% url 'add-to-cart' item.product_id.product_id %}">+</a>
+                            </div>
+                            <div class="col">PKR {{ item.total }}</div>
+                            <div class="col"><a href="{% url 'remove-from-cart' item.id %}" class="close">&#10005;</a></div>
+                        </div>
+                        {% empty %}
+                        <div class="row main align-items-center border-bottom">
+                            <h6 class="text-muted">Cart is empty</h6>
+                        </div>
+                        {% endfor %}
+                    </div>
+        
+                    <div class="back-to-shop"><a href="#">&leftarrow;</a><span class="text-muted">Back to shop</span></div>
+                </div>
+                <div class="col-md-4 summary">
+                    <div><h5><b>Summary</b></h5></div>
+                    <hr>
+                    <div class="row">
+                        <div class="col" style="padding-left:0;">ITEMS {% for item in cart_items %} {{ item.quantity }} {% endfor %}</div>
+                        <div class="col text-right">&euro; {% for item in cart_items %} {{ item.total }} {% endfor | sum %}</div>
+                    </div>
+                    <form>
+                        <p>SHIPPING</p>
+                        <select><option class="text-muted">Standard-Delivery- &euro;5.00</option></select>
+                        <p>GIVE CODE</p>
+                        <input id="code" placeholder="Enter your code">
+                    </form>
+                    <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
+                        <div class="col">TOTAL PRICE</div>
+                        <div class="col text-right">&euro; {% for item in cart_items %} {{ item.total }} {% endfor | sum %} + &euro; 5.00</div>
+                    </div>
+                    <a href="{% url 'checkout' %}" class="btn btn-cart">CHECKOUT</a>
+                </div>
+            </div>
+        </div>
+{% endblock %}

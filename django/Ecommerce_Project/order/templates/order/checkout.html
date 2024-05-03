@@ -1,0 +1,60 @@
+{% extends 'inventory/layout.html' %}
+{% load static %}
+ 
+{% block title %} Checkout {% endblock %}
+ 
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/cart.css' %}">
+{% endblock %}
+ 
+{% block content %}
+    <div class="card">
+        <div class="row">
+            <div class="col-md-8 cart">
+                <div class="title">
+                    <div class="row">
+                        <div class="col-12"><h4><b>Checkout</b></h4></div>
+                        <div class="col align-self-center text-right text-muted">{% for item in cart_items %} {{ item.quantity }} {% endfor %} items</div>
+                    </div>
+                </div>
+    
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-12">
+                            {{form.errors}}
+                            {% for error in form.errors %}
+                                <div class="">{{ error }}</div>
+                            {% endfor %}
+                        </div>
+                        <div class="col">
+                            {{ form.as_p }}
+                        </div>
+
+                        <button type="submit" class="btn btn-cart">Confirm Order</button>
+                    </div>
+                </form>
+    
+                <div class="back-to-shop"><a href="#">&leftarrow;</a><span class="text-muted">Back to shop</span></div>
+            </div>
+            <div class="col-md-4 summary">
+                <div><h5><b>Summary</b></h5></div>
+                <hr>
+                <div class="row">
+                    <div class="col" style="padding-left:0;">ITEMS {% for item in cart_items %} {{ item.quantity }} {% endfor %}</div>
+                    <div class="col text-right">&euro; {% for item in cart_items %} {{ item.total }} {% endfor | sum %}</div>
+                </div>
+                <form>
+                    <p>SHIPPING</p>
+                    <select><option class="text-muted">Standard-Delivery- &euro;5.00</option></select>
+                    <p>GIVE CODE</p>
+                    <input id="code" placeholder="Enter your code">
+                </form>
+                <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
+                    <div class="col">TOTAL PRICE</div>
+                    <div class="col text-right">&euro; {% for item in cart_items %} {{ item.total }} {% endfor | sum %} + &euro; 5.00</div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
